@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buddha Air Ticket</title>
+    <style>
+      @font-face {
+        font-family: myFirstFont;
+        src: url(prima_sans.otf);
+      }
+
+      @font-face {
+        font-family: mySecondFont;
+        src: url(prima_sans_bold.otf);
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .ticket-container {
+        position: relative;
+        width: 800px; /* Adjust based on your image width */
+        margin: 20px auto;
+      }
+      .ticket-image {
+        width: 100%;
+        display: block;
+      }
+      .overlay-text {
+        position: absolute;
+        font-size: 10px; /* Adjust font size as needed */
+        color: #000; /* Adjust text color as needed */
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .bold-field {
+        font-weight: 100;
+      }
+
+      .text-center-first-line {
+        top: 274px;
+        text-align: center;
+        line-height: 1.8em;
+        height: 21px;
+      }
+
+      .text-font-normal {
+        font-family: myFirstFont;
+      }
+
+      .first-line-bold-text {
+        font-family: mySecondFont;
+      }
+
+      .text-center-second-line {
+        font-family: mySecondFont;
+        top: 330px;
+        text-align: center;
+        line-height: 1.8em;
+        height: 20px;
+      }
+
+      .text-center-third-line {
+        font-family: myFirstFont;
+        top: 386px;
+        text-align: center;
+        line-height: 1.8em;
+        height: 20px;
+      }
+
+      #passenger-name-container {
+        left: 66px;
+        width: 180px;
+      }
+      #pnr-no-container {
+        left: 246px;
+        width: 74px;
+      }
+
+      #ticket-number-container {
+        left: 377px;
+        width: 141px;
+      }
+
+      #passenger-nationality {
+        left: 519px;
+        width: 100px;
+      }
+
+      #flt-no {
+        left: 66px;
+        width: 59px;
+      }
+      #flt-date {
+        left: 126px;
+        width: 98px;
+      }
+      #dep-time {
+        left: 225px;
+        width: 76px;
+      }
+      #from {
+        left: 302px;
+        width: 99px;
+      }
+      #to {
+        left: 401px;
+        width: 100px;
+      }
+
+      #issue-date {
+        left: 66px;
+        width: 144px;
+      }
+
+      #total-airfare {
+        top: 497px;
+        left: 65px;
+        width: 670px;
+        text-align: center;
+        line-height: 1.8em;
+        height: 20px;
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ticket-container">
+      <img
+        src="./buddha_fake.jpg"
+        alt="Buddha Air Ticket"
+        class="ticket-image"
+      />
+
+      <table style="border: 1px red; width: 100%">
+        <tr>
+          <td>
+            <div
+              id="passenger-name-container"
+              class="overlay-text bold-field text-center-first-line first-line-bold-text"
+            >
+              JOHN DOE
+            </div>
+          </td>
+          <td>
+            <div
+              id="pnr-no-container"
+              class="overlay-text text-center-first-line text-font-normal"
+            >
+              ABCDEF
+            </div>
+          </td>
+          <td>
+            <div
+              id="ticket-number-container"
+              class="overlay-text bold-field text-center-first-line first-line-bold-text"
+            >
+              30000000
+            </div>
+          </td>
+          <td>
+            <div
+              id="passenger-nationality"
+              class="overlay-text text-center-first-line text-font-normal"
+            >
+              INDIA
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div
+              id="flt-no"
+              class="overlay-text bold-field text-center-second-line"
+            >
+              U4 000
+            </div>
+          </td>
+          <td>
+            <div
+              id="flt-date"
+              class="overlay-text bold-field text-center-second-line"
+            >
+              01-JAN-2025
+            </div>
+          </td>
+          <td>
+            <div
+              id="dep-time"
+              class="overlay-text bold-field text-center-second-line"
+            >
+              10:00
+            </div>
+          </td>
+          <td>
+            <div
+              id="from"
+              class="overlay-text bold-field text-center-second-line"
+            >
+              KTM
+            </div>
+          </td>
+          <td>
+            <div
+              id="to"
+              class="overlay-text bold-field text-center-second-line"
+            >
+              PKR
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div id="issue-date" class="overlay-text text-center-third-line">
+              01-Nov-2025
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3">
+            <div id="total-airfare" class="overlay-text text-font-normal">NPR 5900.00</div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
