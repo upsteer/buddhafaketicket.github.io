@@ -17,32 +17,120 @@
         margin: 0;
         padding: 0;
       }
+
       .ticket-container {
         position: relative;
-        width: 800px; /* Adjust based on your image width */
+        width: 800px;
         margin: 20px auto;
       }
+
       .ticket-image {
         width: 100%;
         display: block;
       }
+
+      .ticket-table {
+        border: 1px red;
+        width: 100%;
+      }
+
+      .first-line-table {
+        position: absolute;
+        top: 257px;
+        left: 71px;
+        width: 550px;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      .first-line-passenger-col {
+        width: 150px;
+      }
+
+      .first-line-pnr-col {
+        width: 72px;
+      }
+
+      .first-line-pnr-ticket-gap {
+        width: 55px;
+      }
+
+      .first-line-ticket-col {
+        width: 150px;
+      }
+
+      .first-line-nationality-col {
+        width: 112px;
+      }
+
+      .first-line-text {
+        font-size: 10px;
+        color: #000;
+        white-space: nowrap;
+        overflow: hidden;
+        line-height: 1.8em;
+        text-align: center;
+        height: 21px;
+      }
+
+      .second-line-table {
+        position: absolute;
+        top: 311px;
+        left: 69px;
+        width: 432px;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+
+      .second-line-flt-no-col {
+        width: 59px;
+      }
+
+      .second-line-flt-date-col {
+        width: 95px;
+      }
+
+      .second-line-dep-time-col {
+        width: 73px;
+      }
+
+      .second-line-from-col {
+        width: 99px;
+      }
+
+      .second-line-to-col {
+        width: 100px;
+      }
+
+      .second-line-status-gap{
+        width: 56px;
+      }
+
+      .second-line-class-col{
+        width: 52px;
+      }
+
+      .second-line-text {
+        font-size: 10px;
+        color: #000;
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: mySecondFont;
+        line-height: 1.8em;
+        text-align: center;
+        height: 20px;
+      }
+
       .overlay-text {
         position: absolute;
-        font-size: 10px; /* Adjust font size as needed */
-        color: #000; /* Adjust text color as needed */
+        font-size: 10px;
+        color: #000;
         white-space: nowrap;
         overflow: hidden;
       }
 
       .bold-field {
         font-weight: 100;
-      }
-
-      .text-center-first-line {
-        top: 274px;
-        text-align: center;
-        line-height: 1.8em;
-        height: 21px;
       }
 
       .text-font-normal {
@@ -53,60 +141,16 @@
         font-family: mySecondFont;
       }
 
-      .text-center-second-line {
-        font-family: mySecondFont;
-        top: 330px;
+      .text-center-third-line,
+      #total-airfare {
         text-align: center;
         line-height: 1.8em;
-        height: 20px;
       }
 
       .text-center-third-line {
         font-family: myFirstFont;
-        top: 386px;
-        text-align: center;
-        line-height: 1.8em;
+        top: 366px;
         height: 20px;
-      }
-
-      #passenger-name-container {
-        left: 66px;
-        width: 180px;
-      }
-      #pnr-no-container {
-        left: 246px;
-        width: 74px;
-      }
-
-      #ticket-number-container {
-        left: 377px;
-        width: 141px;
-      }
-
-      #passenger-nationality {
-        left: 519px;
-        width: 100px;
-      }
-
-      #flt-no {
-        left: 66px;
-        width: 59px;
-      }
-      #flt-date {
-        left: 126px;
-        width: 98px;
-      }
-      #dep-time {
-        left: 225px;
-        width: 76px;
-      }
-      #from {
-        left: 302px;
-        width: 99px;
-      }
-      #to {
-        left: 401px;
-        width: 100px;
       }
 
       #issue-date {
@@ -115,11 +159,9 @@
       }
 
       #total-airfare {
-        top: 497px;
+        top: 476px;
         left: 65px;
         width: 670px;
-        text-align: center;
-        line-height: 1.8em;
         height: 20px;
         font-size: 10px;
       }
@@ -128,98 +170,82 @@
   <body>
     <div class="ticket-container">
       <img
-        src="./buddha_fake.jpg"
+        src="./buddha_fake_1.jpg"
         alt="Buddha Air Ticket"
         class="ticket-image"
       />
 
-      <table style="border: 1px red; width: 100%">
+      <table class="first-line-table">
         <tr>
-          <td>
+          <td class="first-line-passenger-col">
             <div
               id="passenger-name-container"
-              class="overlay-text bold-field text-center-first-line first-line-bold-text"
+              class="first-line-text bold-field first-line-bold-text"
             >
               JOHN DOE
             </div>
           </td>
-          <td>
-            <div
-              id="pnr-no-container"
-              class="overlay-text text-center-first-line text-font-normal"
-            >
+          <td class="first-line-pnr-col">
+            <div id="pnr-no-container" class="first-line-text text-font-normal">
               ABCDEF
             </div>
           </td>
-          <td>
+          <td class="first-line-pnr-ticket-gap"></td>
+          <td class="first-line-ticket-col">
             <div
               id="ticket-number-container"
-              class="overlay-text bold-field text-center-first-line first-line-bold-text"
+              class="first-line-text bold-field first-line-bold-text"
             >
               30000000
             </div>
           </td>
-          <td>
-            <div
-              id="passenger-nationality"
-              class="overlay-text text-center-first-line text-font-normal"
-            >
-              INDIA
+          <td class="first-line-nationality-col">
+            <div id="passenger-nationality" class="first-line-text text-font-normal">
+              NEPAL
             </div>
           </td>
         </tr>
+      </table>
+
+      <table class="second-line-table">
         <tr>
-          <td>
-            <div
-              id="flt-no"
-              class="overlay-text bold-field text-center-second-line"
-            >
-              U4 000
+          <td class="second-line-flt-no-col">
+            <div id="flt-no" class="second-line-text bold-field">U4 000</div>
+          </td>
+          <td class="second-line-flt-date-col">
+            <div id="flt-date" class="second-line-text bold-field">
+              01-JAN-2027
             </div>
           </td>
-          <td>
-            <div
-              id="flt-date"
-              class="overlay-text bold-field text-center-second-line"
-            >
-              01-JAN-2025
-            </div>
+          <td class="second-line-dep-time-col">
+            <div id="dep-time" class="second-line-text bold-field">10:00</div>
           </td>
-          <td>
-            <div
-              id="dep-time"
-              class="overlay-text bold-field text-center-second-line"
-            >
-              10:00
-            </div>
+          <td class="second-line-from-col">
+            <div id="from" class="second-line-text bold-field">KATHMANDU</div>
           </td>
-          <td>
-            <div
-              id="from"
-              class="overlay-text bold-field text-center-second-line"
-            >
-              KTM
-            </div>
+          <td class="second-line-to-col">
+            <div id="to" class="second-line-text bold-field">POKHARA</div>
           </td>
-          <td>
-            <div
-              id="to"
-              class="overlay-text bold-field text-center-second-line"
-            >
-              PKR
-            </div>
+          <td class="second-line-status-gap"></td>
+          <td class="second-line-class-col">
+            <div id="class" class="second-line-text bold-field">E</div>
           </td>
         </tr>
+      </table>
+
+      <table class="ticket-table">
         <tr>
           <td colspan="3">
             <div id="issue-date" class="overlay-text text-center-third-line">
-              01-Nov-2025
+              01-Jan-2027
             </div>
           </td>
         </tr>
         <tr>
           <td colspan="3">
-            <div id="total-airfare" class="overlay-text text-font-normal">NPR 5900.00</div>
+            <div id="total-airfare" class="overlay-text text-font-normal">
+              NPR 9000.00
+            </div>
           </td>
         </tr>
       </table>
